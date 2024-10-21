@@ -1,6 +1,6 @@
 {
-  "name": "@mkwebdev/next-auth-library",
-  "version": "0.1.5",
+  "name": "@mkwebdev/next-auth-library-2",
+  "version": "0.0.2",
   "description": "NextAuth boilerplate",
   "main": "dist/index.js",
   "module": "dist/index.js",

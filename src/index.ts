@@ -1,3 +1,2 @@
-export const greet = (name: string): string => {
-  return `Hello, ${name} !`;
-};
+import "./style.css";
+export { default } from "./components/Button/Button";

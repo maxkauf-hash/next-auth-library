@@ -39,5 +39,6 @@ export default [
       }),
       terser(),
     ],
+    external: ["react", "react-dom"],
   },
 ];

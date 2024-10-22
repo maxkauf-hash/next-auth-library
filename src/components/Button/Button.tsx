@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
@@ -108,37 +107,3 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 export default { Button, buttonVariants };
-=======
-import React from "react";
-import clsx from "clsx";
-
-export interface ButtonProps {
-  type: "button" | "submit";
-  label: string;
-  disabled?: boolean;
-  variant: "primary" | "secondary";
-}
-
-export const Button: React.FC<ButtonProps> = ({
-  type,
-  label,
-  disabled,
-  variant,
-}) => {
-  return (
-    <button
-      type={type}
-      className={clsx(
-        "p-2 rounded-md max-w-fit max-h-fit",
-        variant === "primary" && "bg-blue-500 text-white",
-        variant === "secondary" && "bg-gray-500 text-white"
-      )}
-      disabled={disabled}
-    >
-      {label} - {variant}
-    </button>
-  );
-};
-
-export default Button;
->>>>>>> d9a984a94df7579cf987969036928d5ab9ee5760

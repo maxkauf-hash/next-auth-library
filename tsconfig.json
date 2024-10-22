@@ -8,16 +8,9 @@
     "declarationDir": "./dist",
     "outDir": "./dist",
     "esModuleInterop": true,
-<<<<<<< HEAD
     "skipLibCheck": true,
     "moduleResolution": "Node"
   },
   "include": ["src"],
   "exclude": ["node_modules", "app"]
-=======
-    "skipLibCheck": true
-  },
-  "include": ["src"],
-  "exclude": ["node_modules"]
->>>>>>> d9a984a94df7579cf987969036928d5ab9ee5760
 }

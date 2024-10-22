@@ -8,7 +8,8 @@
     "declarationDir": "./dist",
     "outDir": "./dist",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "moduleResolution": "Node"
   },
   "include": ["src"],
   "exclude": ["node_modules"]

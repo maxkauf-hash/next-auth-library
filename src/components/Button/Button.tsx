@@ -91,22 +91,22 @@ export interface ButtonProps
  *
  * @export
  * @param {ButtonProps} props
- * @returns {React.ReactNode}
+ * @returns {JSX.Element}
  */
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    { className, variant, size, asChild = false, rounded, ...props },
-    ref
-  ): React.ReactNode => {
-    const Comp = asChild ? Slot : "button";
-    return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, rounded, className }))}
-        ref={ref}
-        {...props}
-      />
-    );
-  }
-);
+export const Button: React.FC<ButtonProps> = ({
+  className,
+  variant,
+  size,
+  asChild = false,
+  rounded,
+  ...props
+}: ButtonProps): JSX.Element => {
+  return (
+    <button
+      className={cn(buttonVariants({ variant, size, rounded, className }))}
+      {...props}
+    />
+  );
+};
 
 export default { Button, buttonVariants };

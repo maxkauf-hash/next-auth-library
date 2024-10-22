@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 
 import { cn } from "../../utils";
@@ -44,8 +43,7 @@ export const buttonVariants = cva("m-2 p-2 max-w-fit", {
  * @export
  * @interface ButtonProps
  */
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps {
   /**
    * Indique si le bouton doit être rendu comme un enfant d'un autre composant via le slot.
    *
@@ -93,7 +91,7 @@ export interface ButtonProps
  * @param {ButtonProps} props
  * @returns {JSX.Element}
  */
-export const Button: React.FC<ButtonProps> = ({
+export const Button = ({
   className,
   variant,
   size,

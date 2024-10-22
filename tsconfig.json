@@ -6,11 +6,12 @@
     "jsx": "react",
     "declaration": true,
     "declarationDir": "./dist",
+    "rootDir": "src",
     "outDir": "./dist",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "Node"
   },
   "include": ["src"],
-  "exclude": ["node_modules", "app"]
+  "exclude": ["node_modules", "dist", "app"]
 }

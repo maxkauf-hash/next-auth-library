@@ -33,7 +33,7 @@ export default [
         tsconfig: "./tsconfig.json",
       }),
       babel({
-        exclude: ["node_modules/**", "app/**/*"],
+        exclude: ["node_modules/**"],
         presets: ["@babel/preset-react"],
         extensions: [".ts", ".tsx", ".js", ".jsx"],
       }),

@@ -8,7 +8,7 @@ import { cn } from "../../utils";
  * Configuration des variantes de styles pour le bouton.
  * Utilise `cva` pour générer des classes en fonction des propriétés `variant`, `size`, et `rounded`.
  */
-const buttonVariants = cva("m-2 p-2 max-w-fit", {
+export const buttonVariants = cva("m-2 p-2 max-w-fit", {
   variants: {
     variant: {
       default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
@@ -93,7 +93,7 @@ export interface ButtonProps
  * @param {ButtonProps} props - Les propriétés du bouton.
  * @returns {JSX.Element} Le bouton avec les styles et variantes définies.
  */
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, rounded, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (

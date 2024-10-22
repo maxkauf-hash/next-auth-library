@@ -90,11 +90,14 @@ export interface ButtonProps
  * Composant Button réutilisable avec des styles configurables basés sur les variantes.
  *
  * @export
- * @param {ButtonProps} props - Les propriétés du bouton.
- * @returns {JSX.Element} Le bouton avec les styles et variantes définies.
+ * @param {ButtonProps} props
+ * @returns {React.ReactNode}
  */
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, rounded, ...props }, ref) => {
+  (
+    { className, variant, size, asChild = false, rounded, ...props },
+    ref
+  ): React.ReactNode => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp

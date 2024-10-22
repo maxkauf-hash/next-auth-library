@@ -1,4 +1,8 @@
 node_modules
 dist
+<<<<<<< HEAD
 .env
 app
+=======
+.env
+>>>>>>> d9a984a94df7579cf987969036928d5ab9ee5760

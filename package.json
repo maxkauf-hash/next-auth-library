@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "@mkwebdev/next-auth-library",
   "version": "0.1.5",
   "description": "NextAuth boilerplate",
+=======
+  "name": "@mkwebdev/next-auth-library-2",
+  "version": "0.0.2",
+  "description": "NextAuthJs boilerplate",
+>>>>>>> d9a984a94df7579cf987969036928d5ab9ee5760
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,12 +34,21 @@
   "devDependencies": {
     "@babel/core": "^7.25.8",
     "@babel/preset-react": "^7.25.7",
+<<<<<<< HEAD
     "@rollup/plugin-node-resolve": "^15.3.0",
+=======
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+>>>>>>> d9a984a94df7579cf987969036928d5ab9ee5760
     "@rollup/plugin-typescript": "^12.1.1",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "rollup": "^2.79.2",
+<<<<<<< HEAD
     "rollup-plugin-babel": "^4.4.0",
+=======
+>>>>>>> d9a984a94df7579cf987969036928d5ab9ee5760
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
@@ -56,10 +71,14 @@
     "tailwindcss": "^3.4.14"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "tailwind": "^4.0.0",
     "tailwind-merge": "^2.5.4"
+=======
+    "clsx": "^2.1.1"
+>>>>>>> d9a984a94df7579cf987969036928d5ab9ee5760
   }
 }

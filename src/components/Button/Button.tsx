@@ -99,12 +99,7 @@ export const Button = ({
   rounded,
   ...props
 }: ButtonProps): JSX.Element => {
-  return (
-    <button
-      className={cn(buttonVariants({ variant, size, rounded, className }))}
-      {...props}
-    />
-  );
+  return <button className={`${buttonVariants({variant, size, rounded})}`} {...props} />;
 };
 
 export default { Button, buttonVariants };

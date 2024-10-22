@@ -44,6 +44,7 @@ export const buttonVariants = cva("m-2 p-2 max-w-fit", {
  * @interface ButtonProps
  */
 export interface ButtonProps {
+  children: React.ReactNode;
   /**
    * Indique si le bouton doit être rendu comme un enfant d'un autre composant via le slot.
    *
@@ -92,6 +93,7 @@ export interface ButtonProps {
  * @returns {JSX.Element}
  */
 export const Button = ({
+  children,
   className,
   variant,
   size,
@@ -99,7 +101,14 @@ export const Button = ({
   rounded,
   ...props
 }: ButtonProps): JSX.Element => {
-  return <button className={`${buttonVariants({variant, size, rounded})}`} {...props} />;
+  return (
+    <button
+      className={`${buttonVariants({ variant, size, rounded })}`}
+      {...props}
+    >
+      {children}
+    </button>
+  );
 };
 
 export default { Button, buttonVariants };

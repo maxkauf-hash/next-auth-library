@@ -5,6 +5,7 @@ import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 import commonjs from "@rollup/plugin-commonjs";
+import json from "@rollup/plugin-json";
 
 export default [
   {
@@ -40,6 +41,7 @@ export default [
       }),
       terser(),
       commonjs(),
+      json(),
     ],
     external: ["react", "react-dom"],
   },

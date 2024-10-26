@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { CardWrapper } from "../CardWrapper";
 import { useForm } from "react-hook-form";

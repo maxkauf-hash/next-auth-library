@@ -146,3 +146,5 @@ export const RegisterForm = () => {
     </CardWrapper>
   );
 };
+
+export default RegisterForm;

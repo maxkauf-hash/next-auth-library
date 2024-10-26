@@ -105,3 +105,5 @@ export const LoginForm = ({ onLoginSuccess }: OnLoginSuccessProps) => {
     </CardWrapper>
   );
 };
+
+export default LoginForm;

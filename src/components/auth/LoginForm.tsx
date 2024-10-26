@@ -1,6 +1,7 @@
+import React from "react";
 import { useState, useTransition } from "react";
 import { login } from "../../api/apiRoutes.js";
-import CardWrapper from "../CardWrapper.jsx";
+import { CardWrapper } from "../CardWrapper.js";
 import {
   Form,
   FormControl,
@@ -8,18 +9,20 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../ui/form.tsx";
-import { Input } from "../ui/input.tsx";
-import { FormError } from "../FormError.jsx";
-import { FormSuccess } from "../FormSuccess.jsx";
+} from "../ui/form.js";
+import { Input } from "../ui/input.js";
+import { FormError } from "../FormError.js";
+import { FormSuccess } from "../FormSuccess.js";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import loginUserSchema from "../../schemas/loginUserSchema.jsx";
-import { Button } from "../ui/button.tsx";
+import { loginUserSchema } from "../../schemas/loginUserSchema";
+import { Button } from "../ui/button.js";
+import { OnLoginSuccessProps } from "../../types";
+import * as z from "zod";
 
-export default function LoginForm({ onLoginSuccess }) {
-  const [error, setError] = useState();
-  const [success, setSuccess] = useState();
+export const LoginForm = ({ onLoginSuccess }: OnLoginSuccessProps) => {
+  const [error, setError] = useState<string | undefined>();
+  const [success, setSuccess] = useState<string | undefined>();
   const [isPending, startTransition] = useTransition();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +32,7 @@ export default function LoginForm({ onLoginSuccess }) {
     defaultValues: { email: "", password: "" },
   });
 
-  const onSubmit = (values) => {
+  const onSubmit = (values: z.infer<typeof loginUserSchema>) => {
     setError("");
     setSuccess("");
 
@@ -101,4 +104,4 @@ export default function LoginForm({ onLoginSuccess }) {
       </Form>
     </CardWrapper>
   );
-}
+};

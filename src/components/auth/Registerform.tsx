@@ -1,10 +1,11 @@
 "use client";
 
-import CardWrapper from "../CardWrapper";
+import React from "react";
+import { CardWrapper } from "../CardWrapper";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { registerSchema } from "../../schemas/registerUserSchema";
+import { registerUserSchema } from "../../schemas/registerUserSchema";
 import {
   Form,
   FormControl,
@@ -26,7 +27,7 @@ export const RegisterForm = () => {
   const [isPending, startTransition] = useTransition();
 
   const form = useForm({
-    resolver: zodResolver(registerSchema),
+    resolver: zodResolver(registerUserSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -35,7 +36,7 @@ export const RegisterForm = () => {
     },
   });
 
-  const onSubmit = (values) => {
+  const onSubmit = (values: z.infer<typeof registerUserSchema>) => {
     setError("");
     setSuccess("");
 
@@ -147,5 +148,3 @@ export const RegisterForm = () => {
     </CardWrapper>
   );
 };
-
-export default RegisterForm;

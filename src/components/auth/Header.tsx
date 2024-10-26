@@ -1,11 +1,11 @@
-import { cn } from "../../lib/utils";
+import React from "react";
 import { CardTitle } from "../ui/card";
 
-export default function Header({ label }) {
+export const Header = ({ label }: { label: string }): JSX.Element => {
   return (
     <CardTitle>
       <p className="text-3xl font-semibold text-center">Auth</p>
       <p className="text-muted-foreground">{label}</p>
     </CardTitle>
   );
-}
+};

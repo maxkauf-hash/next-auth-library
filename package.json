@@ -14,8 +14,8 @@
   "scripts": {
     "build": "rollup -c",
     "semantic-release": "semantic-release",
-    "postinstall": "node ./scripts/setupEnv.ts",
-    "load-env": "node ./scripts/loadEnv.ts"
+    "postinstall": "node ./scripts/setupEnv.js",
+    "load-env": "node ./scripts/loadEnv.js"
   },
   "repository": {
     "type": "git",
